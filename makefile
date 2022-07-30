@@ -9,6 +9,7 @@ default :
 
 INCLUDES += -I../ -I../../ -I../../../ -I../../src -I/usr/local/include
 LIBS = -L../ -L../../ -L../../../ -L/usr/local/lib
+CFLAGS = -Wall -O3 -fPIC --shared -Wl,-rpath,. -Wl,-rpath,.. -Wl,-rpath,/usr/local/lib
 
 pcre:
 	@$(CC) -o lre.so lre.c $(CFLAGS) $(INCLUDES) $(LIBS) -lcore -lpcreposix

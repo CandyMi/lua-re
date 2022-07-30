@@ -13,12 +13,12 @@ CFLAGS = -Wall -O3 -fPIC --shared -Wl,-rpath,. -Wl,-rpath,.. -Wl,-rpath,/usr/loc
 
 pcre:
 	@$(CC) -o lre.so lre.c $(CFLAGS) $(INCLUDES) $(LIBS) -lcore -lpcreposix
-	@mv lre.so re.lua ../
+	@cp lre.so re.lua ../
 
 pcre2:
 	@$(CC) -o lre.so lre.c $(CFLAGS) $(INCLUDES) $(LIBS) -lcore -lpcre2-posix
-	@mv lre.so re.lua ../
+	@cp lre.so re.lua ../
 
 build:
 	@$(CC) -o lre.so lre.c $(CFLAGS) $(INCLUDES) $(LIBS) -lcore
-	@mv lre.so re.lua ../
+	@cp lre.so re.lua ../

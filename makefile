@@ -12,12 +12,12 @@ LIBS = -L../ -L../../ -L../../../ -L/usr/local/lib
 
 pcre:
 	@$(CC) -o lre.so lre.c $(CFLAGS) $(INCLUDES) $(LIBS) -lcore -lpcreposix
-	@mv *.so ../
+	@mv lre.so re.lua ../
 
 pcre2:
 	@$(CC) -o lre.so lre.c $(CFLAGS) $(INCLUDES) $(LIBS) -lcore -lpcre2-posix
-	@mv *.so ../
+	@mv lre.so re.lua ../
 
 build:
 	@$(CC) -o lre.so lre.c $(CFLAGS) $(INCLUDES) $(LIBS) -lcore
-	@mv *.so ../
+	@mv lre.so re.lua ../
